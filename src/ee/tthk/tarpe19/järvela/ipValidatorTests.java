@@ -24,14 +24,14 @@ class ipValidatorTests {
 	}
 	@Test
 	void ShouldReturn_False_GivenEmptyStringParameter() {
-	IpValidator validator = new IpValidator();
-	assertFalse(validator.ValidateIpv4Address("")); 
+		IpValidator validator = new IpValidator();
+		assertFalse(validator.ValidateIpv4Address("")); 
 	}
 	
 	@Test
 	void ShouldBe_True_GivenStringWithThreeDots() {
-	IpValidator validator = new IpValidator();
-	assertTrue(validator.ValidateIpv4Address("1.2.3.1")); 
+		IpValidator validator = new IpValidator();
+		assertTrue(validator.ValidateIpv4Address("1.2.3.1")); 
 	
 	}
 }
