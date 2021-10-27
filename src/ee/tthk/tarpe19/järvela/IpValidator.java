@@ -17,9 +17,11 @@ public class IpValidator {
 	}
 
 	public int[] getNumbers(String string) {
-		return null;
-				
-	
+		return Arrays
+				.stream(string.split("\\."))
+				.mapToInt(Integer::parseInt)
+				.toArray();
 	}
+				
 
 }
