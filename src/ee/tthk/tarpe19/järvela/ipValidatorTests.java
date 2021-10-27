@@ -31,7 +31,7 @@ class ipValidatorTests {
 	@Test
 	void ShouldBe_True_GivenStringWithThreeDots() {
 		IpValidator validator = new IpValidator();
-		assertTrue(validator.ValidateIpv4Address("1.2.3.1")); 
+		assertTrue(validator.ValidateIpv4Address("1.2.3.4")); 
 	
 	}
 	@Test
@@ -41,4 +41,30 @@ class ipValidatorTests {
 		assertArrayEquals(expected,validator.getNumbers("1.2.3.4")); 
 	
 	}
+	@Test
+	void ShouldBe_False_GivenStringWithThreeNumbersAndDots() {
+		IpValidator validator = new IpValidator();
+		assertFalse(validator.ValidateIpv4Address("1.2.3."));
+		
+		
+		
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
