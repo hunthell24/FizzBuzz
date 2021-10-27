@@ -1,5 +1,6 @@
 package ee.tthk.tarpe19.järvela;
 
+import java.util.Arrays;
 import java.util.function.BooleanSupplier;
 
 public class IpValidator {
@@ -13,6 +14,12 @@ public class IpValidator {
 
 	private boolean hasThreeDots(String ipString) {
 		return ipString.chars().filter(c->c=='.').count()==3;
+	}
+
+	public int[] getNumbers(String string) {
+		return null;
+				
+	
 	}
 
 }
