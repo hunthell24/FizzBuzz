@@ -44,33 +44,11 @@ public class IpValidator {
 	}	
 	
 	private int LastNumber (String ipString) {
-		return getNumbers(ipString)[getNumbers(ipString).length-1];
-		
+		return getNumbers(ipString)[getNumbers(ipString).length-1];	
 	}
-	
+
 	private int FirstNumber(String ipString) {
 		return getNumbers(ipString)[0];
 	}
-	
-	
 				
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
