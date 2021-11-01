@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class ipValidatorTests {
 
+	private IpValidator validator;
 	@BeforeEach
 	void setUp() throws Exception {
 	}
@@ -18,34 +19,28 @@ class ipValidatorTests {
 
 	@Test
 	void ShouldReturn_False_WhenEmptyStringParameter() {
-		IpValidator validator = new IpValidator();
 		assertFalse(validator.ValidateIpv4Address(""));
 
 	}
 	@Test
 	void ShouldReturn_False_GivenEmptyStringParameter() {
-		IpValidator validator = new IpValidator();
 		assertFalse(validator.ValidateIpv4Address("")); 
 	}
 	
 	@Test
 	void ShouldBe_True_GivenStringWithThreeDots() {
-		IpValidator validator = new IpValidator();
 		assertTrue(validator.ValidateIpv4Address("1.2.3.4")); 
 	
 	}
 	@Test
 	void ShouldReturnFourNumbersGivenStringWithThreeDots() {
-		IpValidator validator = new IpValidator();
 		int[] expected = {1,2,3,4};
 		assertArrayEquals(expected,validator.getNumbers("1.2.3.4")); 
 	
 	}
 	@Test
 	void ShouldBe_False_GivenStringWithThreeNumbersAndDots() {
-		IpValidator validator = new IpValidator();
 		assertFalse(validator.ValidateIpv4Address("1.2.3."));
-		
 		
 		
 	}
