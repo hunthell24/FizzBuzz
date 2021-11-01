@@ -11,6 +11,7 @@ class ipValidatorTests {
 	private IpValidator validator;
 	@BeforeEach
 	void setUp() throws Exception {
+		validator = new IpValidator();
 	}
 
 	@AfterEach
